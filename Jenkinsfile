@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker 'node:14alpine' }
+    agent any
 
     //If maven is configured in jenkins, then we dont need to specify maven here unless we need a specific version for this job
     //tools {
@@ -8,12 +8,6 @@ pipeline {
     //}
 
     stages {
-
-        stage('version') {
-            steps {
-                sh 'node --version'
-            }
-        }
 
         stage('test'){
             steps{

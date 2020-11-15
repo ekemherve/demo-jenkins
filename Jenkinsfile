@@ -8,6 +8,13 @@ pipeline {
 
     stages {
 
+        stage('test'){
+            steps{
+                // execute junit test
+                sh 'mvn clean test'
+            }
+        }
+
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository

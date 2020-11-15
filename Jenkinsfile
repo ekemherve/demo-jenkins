@@ -8,16 +8,6 @@ pipeline {
 
     stages {
 
-        stage('ckeck versions'){
-            steps{
-                // print java version
-                sh 'java-version'
-
-                // print maven version
-                sh 'mvn -v'
-            }
-        }
-
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository

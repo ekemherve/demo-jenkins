@@ -22,7 +22,7 @@ pipeline {
 
                 // Run Maven on a Unix agent.
                 // Skip all test(ie unit test and integration test)
-                sh "mvn mvn install -DskipTests  clean package"
+                sh "mvn install -DskipTests  clean package"
 
                 // To run Maven on a Windows agent, use
                 // Skip all test(ie unit test and integration test)

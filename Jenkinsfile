@@ -43,6 +43,13 @@ pipeline {
                 sh 'mvn failsafe:integration-test '
             }
         }
+
+        stage('site'){
+            steps{
+                // execute junit test
+                sh 'mvn site '
+            }
+        }
     }
 
     post {

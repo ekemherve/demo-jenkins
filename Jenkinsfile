@@ -28,7 +28,7 @@ pipeline {
                 // Skip all test(ie unit test and integration test)
                 // bat "mvn install -DskipTests clean package"
             }
-
+        }
 
         stage('report') {
             steps {
@@ -37,20 +37,20 @@ pipeline {
             }
         }
 
-        post {
-            // If Maven was able to run the tests, even if some of the test
-            // failed, record the test results and archive the jar file.
-            success {
-                junit '**/target/surefire-reports/TEST-*.xml'
-                archiveArtifacts 'target/*.jar'
-            }
-        }
-
         stage('integration test'){
             steps{
                 // execute junit test
                 sh 'mvn failsafe:integration-test '
             }
+        }
+    }
+
+    post {
+        // If Maven was able to run the tests, even if some of the test
+        // failed, record the test results and archive the jar file.
+        success {
+            junit '**/target/surefire-reports/TEST-*.xml'
+            archiveArtifacts 'target/*.jar'
         }
     }
 }

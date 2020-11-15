@@ -1,12 +1,19 @@
 pipeline {
-    agent any
+    agent { docker 'node:14alpine' }
 
+    //If maven is configured in jenkins, then we dont need to specify maven here unless we need a specific version for this job
     //tools {
         // Install the Maven version configured as "M3" and add it to the path.
         //maven "M3"
     //}
 
     stages {
+
+        stage('version') {
+            steps {
+                sh 'node --version'
+            }
+        }
 
         stage('test'){
             steps{

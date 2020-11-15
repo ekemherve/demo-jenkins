@@ -1,12 +1,23 @@
 pipeline {
     agent any
 
-    /*tools {
+    tools {
         // Install the Maven version configured as "M3" and add it to the path.
         maven "M3"
-    }*/
+    }
 
     stages {
+
+        statge('ckeck versions'){
+            steps{
+                // print java version
+                sh 'java-version'
+
+                // print maven version
+                sh 'mvn -v'
+            }
+        }
+
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository

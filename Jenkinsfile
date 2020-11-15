@@ -7,6 +7,10 @@ pipeline {
         //maven "M3"
     //}
 
+    triggers {
+        pollSCM 'H/1 * * * *'
+    }
+
     stages {
 
         stage('test'){

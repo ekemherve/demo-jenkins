@@ -8,7 +8,7 @@ pipeline {
 
     stages {
 
-        statge('ckeck versions'){
+        stage('ckeck versions'){
             steps{
                 // print java version
                 sh 'java-version'

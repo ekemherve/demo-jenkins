@@ -24,6 +24,8 @@ pipeline {
                 sh 'ls src/main'
                 // print src/test directory content
                 sh 'ls src/test'
+                // print src/main/java directory content
+                sh 'ls src/main/java'
             }
         }
 

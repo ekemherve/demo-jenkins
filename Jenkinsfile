@@ -17,6 +17,7 @@ pipeline {
             steps{
                 // check maven version
                 sh 'mvn -v'
+                sh 'java -version'
             }
         }
 

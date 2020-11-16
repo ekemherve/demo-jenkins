@@ -9,7 +9,7 @@ pipeline {
 
     // This will trigger a poll every hour and will make a build if there is a new commit in our remote SCM(Github in this case) repository
     triggers {
-        pollSCM '/1 * * * *'
+        pollSCM '1 * * * *'
     }
 
     stages {

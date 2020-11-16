@@ -13,6 +13,13 @@ pipeline {
 
     stages {
 
+        stage('version'){
+            steps{
+                // check maven version
+                sh 'mvn -v'
+            }
+        }
+
         stage('test'){
             steps{
                 // execute junit test

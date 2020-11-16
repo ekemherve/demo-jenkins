@@ -26,8 +26,8 @@ pipeline {
                 sh 'ls src/test'
                 // print src/main/java directory content
                 sh 'ls src/main/java'
-                // print src/main/resources directory content
-                sh 'ls src/main/resources'
+                // print Jenkinsfile file content
+                sh 'ls Jenkinsfile'
             }
         }
 

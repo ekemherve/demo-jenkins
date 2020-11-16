@@ -15,7 +15,7 @@ pipeline {
 
         stage('print'){
             steps{
-                // print actual directory
+                // print all actual directory content
                 sh 'ls -a'
             }
         }

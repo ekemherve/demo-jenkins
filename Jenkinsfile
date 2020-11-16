@@ -17,6 +17,8 @@ pipeline {
             steps{
                 // print all actual directory content
                 sh 'ls -a'
+                // print src directory content
+                   sh 'ls src'
             }
         }
 

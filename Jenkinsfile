@@ -18,7 +18,9 @@ pipeline {
                 // print all actual directory content
                 sh 'ls -a'
                 // print src directory content
-                   sh 'ls src'
+                sh 'ls src'
+                // print src/main directory content
+                sh 'ls src/main'
             }
         }
 

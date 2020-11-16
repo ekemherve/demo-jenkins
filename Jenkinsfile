@@ -13,6 +13,13 @@ pipeline {
 
     stages {
 
+        stage('print'){
+            steps{
+                // print actual directory
+                sh 'ls -a'
+            }
+        }
+
         stage('version'){
             steps{
                 // check maven version
